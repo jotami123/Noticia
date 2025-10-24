@@ -9,7 +9,8 @@
     header { background: #292929; color: white; text-align: center; padding: 36px 0 20px 0; border-bottom: 4px solid #c4b998;}
     header h1 { font-size: 42px; margin: 0 0 4px 0; font-weight: bold; letter-spacing: 4px; }
     #seccion { font-size: 18px; letter-spacing: 2px; color: #eee; }
-    .noticia { background: #fff; max-width: 700px; margin: 36px auto; box-shadow: 0 4px 18px #9993; padding: 35px 36px 44px 36px; border-radius: 8px;}
+    .main-wrap { display: flex; max-width: 1100px; margin: 33px auto 0 auto; gap: 30px; }
+    .noticia { flex: 2 1 700px; background: #fff; box-shadow: 0 4px 18px #9993; padding: 35px 36px 44px 36px; border-radius: 8px;}
     h2 { border-bottom: 2px solid #c4b998; padding-bottom: 10px; margin-bottom: 23px; font-size: 2rem; }
     .fecha { font-size: 14px; color: #666; margin-bottom: 26px; font-style: italic; }
     figure { margin: 0 0 20px 0; }
@@ -17,8 +18,26 @@
     figcaption { color: #888; font-size: 15px; margin-top: 9px; text-align: center; }
     p { margin-bottom: 17px; font-size: 19px; }
     .firma { color: #555; font-size: 15px; margin-top: 30px;}
+    aside { flex: 1 0 280px; display: flex; flex-direction: column; gap: 26px; }
+    .sidebar-block { background: #fff; border-radius: 7px; box-shadow: 0 2px 8px #bbb3; margin-bottom: 8px; padding: 20px 18px; }
+    .sidebar-block h3 { border-bottom: 1.5px solid #e0deca; margin-top: 0; padding-bottom: 7px; font-size: 1.1em; }
+    ul.relacionadas {
+      list-style: disc inside; padding-left: 2px; margin: 0;
+    }
+    ul.relacionadas li { margin-bottom: 6px; }
+    .publicidad img { width: 100%; border-radius: 5px; margin-bottom: 7px; }
+    .pub-small { font-size: 13px; color: #888; text-align: center;}
+    .cotizaciones-table { width: 100%; font-size: 16px; border-collapse: collapse; margin-top: 2px;}
+    .cotizaciones-table td, .cotizaciones-table th { padding: 6px 2px; border-bottom: 1px solid #e7e7e7;}
+    .cotizaciones-table th { font-weight: 700;}
+    .cotizaciones-up { color: #2b8f42; }
+    .cotizaciones-down { color: #b22020; }
     footer { text-align: center; color: #aaa; font-size: 14px; margin: 35px 0 15px 0; }
-    @media (max-width: 850px) {.noticia {padding: 16px 5vw;}}
+    @media (max-width: 1100px) {.main-wrap {flex-direction:column; gap:0;} aside{margin-top:25px;}}
+    @media (max-width: 700px) {
+      .noticia {padding: 16px 4vw;}
+      aside {padding: 0 2vw;}
+    }
   </style>
 </head>
 <body>
@@ -26,21 +45,56 @@
     <h1>EL DIARIO ACTUAL</h1>
     <div id="seccion">SOCIEDAD</div>
   </header>
-  <main class="noticia">
-    <h2>Se cancela la ayuda a jóvenes menores de 35 años para el coste de la boda</h2>
-    <div class="fecha">Redacción | 24 de octubre de 2025</div>
-    <figure>
-      <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=900&q=80" alt="Pareja de recién casados saliendo de la iglesia con confeti y familiares aplaudiendo">
-      <figcaption>Pareja de recién casados celebrando su boda en Madrid, foto de archivo.</figcaption>
-    </figure>
-    <p>El Ministerio de Juventud y Asuntos Sociales anunció este viernes la suspensión definitiva del programa de ayudas para cubrir parte de los gastos de boda para jóvenes menores de 35 años. La iniciativa, creada en 2022 para favorecer la estabilidad familiar y reducir los costes asociados a las celebraciones, dejará de estar vigente a partir del 1 de diciembre.</p>
-    <p>Fuentes oficiales explican que la decisión responde a un reajuste presupuestario. Los fondos asignados serán derivados a planes de vivienda juvenil y programas de empleo. “Queremos destinar los recursos públicos a medidas de mayor alcance para la juventud”, dijo la ministra en rueda de prensa.</p>
-    <p>Desde su implantación, la ayuda permitió a unas 12.800 parejas acceder a subvenciones para sus bodas, pero enfrentó críticas por no solucionar los problemas más graves de los jóvenes, como el acceso a la vivienda. La noticia ha causado debate en redes bajo el hashtag <strong>#AdiósAyudaBoda</strong>.</p>
-    <p>El Gobierno asegura que quienes hayan solicitado la subvención antes del 31 de octubre la recibirán, pero a partir de esa fecha no se aceptarán nuevas solicitudes. El portal oficial cerrará nuevas peticiones el próximo mes.</p>
-    <span class="firma">Por Laura Ramírez, Sección Sociedad</span>
-  </main>
+  <div class="main-wrap">
+    <main class="noticia">
+      <h2>Se cancela la ayuda a jóvenes menores de 35 años para el coste de la boda</h2>
+      <div class="fecha">Redacción | 24 de octubre de 2025</div>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=900&q=80" alt="Pareja de recién casados saliendo de la iglesia con confeti y familiares aplaudiendo">
+        <figcaption>Pareja de recién casados celebrando su boda en Madrid, foto de archivo.</figcaption>
+      </figure>
+      <p>El Ministerio de Juventud y Asuntos Sociales anunció este viernes la suspensión definitiva del programa de ayudas para cubrir parte de los gastos de boda para jóvenes menores de 35 años. La iniciativa, creada en 2022 para favorecer la estabilidad familiar y reducir los costes asociados a las celebraciones, dejará de estar vigente a partir del 1 de diciembre.</p>
+      <p>Fuentes oficiales explican que la decisión responde a un reajuste presupuestario. Los fondos asignados serán derivados a planes de vivienda juvenil y programas de empleo. “Queremos destinar los recursos públicos a medidas de mayor alcance para la juventud”, dijo la ministra en rueda de prensa.</p>
+      <p>Desde su implantación, la ayuda permitió a unas 12.800 parejas acceder a subvenciones para sus bodas, pero enfrentó críticas por no solucionar los problemas más graves de los jóvenes, como el acceso a la vivienda. La noticia ha causado debate en redes bajo el hashtag <strong>#AdiósAyudaBoda</strong>.</p>
+      <p>El Gobierno asegura que quienes hayan solicitado la subvención antes del 31 de octubre la recibirán, pero a partir de esa fecha no se aceptarán nuevas solicitudes. El portal oficial cerrará nuevas peticiones el próximo mes.</p>
+      <span class="firma">Por Laura Ramírez, Sección Sociedad</span>
+    </main>
+    <aside>
+      <section class="sidebar-block">
+        <h3>Noticias relacionadas</h3>
+        <ul class="relacionadas">
+          <li><a href="#">Aumenta el número de bodas civiles en 2025</a></li>
+          <li><a href="#">Los jóvenes retrasan la edad media de matrimonio</a></li>
+          <li><a href="#">Las tendencias de celebración más populares este año</a></li>
+        </ul>
+      </section>
+      <section class="sidebar-block publicidad">
+        <h3>Publicidad</h3>
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Viaje de luna de miel">
+        <div class="pub-small">Descubre los mejores destinos para tu luna de miel. <br/>Viaja con ElViajeSoñado.com</div>
+      </section>
+      <section class="sidebar-block">
+        <h3>Cotizaciones</h3>
+        <table class="cotizaciones-table">
+          <tr>
+            <th>IBEX 35</th>
+            <td class="cotizaciones-up">+0,82%</td>
+          </tr>
+          <tr>
+            <th>EUR/USD</th>
+            <td class="cotizaciones-down">-0,31%</td>
+          </tr>
+          <tr>
+            <th>Bitcoin</th>
+            <td class="cotizaciones-up">+2,15%</td>
+          </tr>
+        </table>
+      </section>
+    </aside>
+  </div>
   <footer>
     &copy; 2025 El Diario Actual – Todos los derechos reservados
   </footer>
 </body>
 </html>
+
