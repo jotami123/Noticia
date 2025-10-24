@@ -5,31 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>El Diario Actual - Noticia</title>
   <style>
-    body { font-family: "Times New Roman", Times, serif; background-color: #fff; color: #000; margin: 40px auto; max-width: 800px; line-height: 1.6; padding: 0 20px; border-left: 1px solid #ccc; border-right: 1px solid #ccc; }
-    header { border-bottom: 3px double #000; padding-bottom: 10px; margin-bottom: 35px; text-align: center; }
-    header h1 { font-size: 32px; margin: 0; letter-spacing: 4px; font-weight: bold; }
-    article h2 { font-size: 28px; font-weight: bold; margin-bottom: 20px; border-bottom: 1px solid #000; padding-bottom: 8px; }
-    article p { margin-bottom: 20px; font-size: 18px; }
-    .author-date { font-style: italic; color: #555; margin-bottom: 40px; }
-    footer { text-align: center; margin-top: 50px; font-size: 14px; color: #777; border-top: 1px solid #ddd; padding-top: 12px; }
+    body { font-family: 'Georgia', 'Times New Roman', Times, serif; background-color: #f5f5f5; color: #222; margin: 0; }
+    header { background: #292929; color: white; text-align: center; padding: 36px 0 20px 0; border-bottom: 4px solid #c4b998;}
+    header h1 { font-size: 42px; margin: 0 0 4px 0; font-weight: bold; letter-spacing: 4px; }
+    #seccion { font-size: 18px; letter-spacing: 2px; color: #eee; }
+    .noticia { background: #fff; max-width: 700px; margin: 36px auto; box-shadow: 0 4px 18px #9993; padding: 35px 36px 44px 36px; border-radius: 8px;}
+    h2 { border-bottom: 2px solid #c4b998; padding-bottom: 10px; margin-bottom: 23px; font-size: 2rem; }
+    .fecha { font-size: 14px; color: #666; margin-bottom: 26px; font-style: italic; }
+    figure { margin: 0 0 20px 0; }
+    .noticia img { width: 100%; max-height: 350px; object-fit: cover; border-radius: 5px; border: 1px solid #ccc; }
+    figcaption { color: #888; font-size: 15px; margin-top: 9px; text-align: center; }
+    p { margin-bottom: 17px; font-size: 19px; }
+    .firma { color: #555; font-size: 15px; margin-top: 30px;}
+    footer { text-align: center; color: #aaa; font-size: 14px; margin: 35px 0 15px 0; }
+    @media (max-width: 850px) {.noticia {padding: 16px 5vw;}}
   </style>
 </head>
 <body>
   <header>
     <h1>EL DIARIO ACTUAL</h1>
+    <div id="seccion">SOCIEDAD</div>
   </header>
-  <article>
+  <main class="noticia">
     <h2>Se cancela la ayuda a jóvenes menores de 35 años para el coste de la boda</h2>
-    <div class="author-date">Redacción | 24 de octubre de 2025</div>
-    <p>El Ministerio de Juventud y Asuntos Sociales ha anunciado hoy la suspensión definitiva del programa de ayudas económicas destinadas a jóvenes menores de 35 años para afrontar los costes derivados de la celebración de bodas. Esta medida entrará en vigor a partir del próximo 1 de diciembre.</p>
-    <p>El programa, que desde su puesta en marcha en 2022 beneficiaba a miles de parejas jóvenes, será descontinuado para poder reasignar el presupuesto a otras áreas prioritarias como acceso a vivienda juvenil y generación de empleo. Según la ministra, esta redirección responde a la necesidad de afrontar retos sociales con mayor alcance a largo plazo.</p>
-    <p>Desde su creación, se han otorgado ayudas que oscilaban entre 1.000 y 3.000 euros a aproximadamente 12.800 parejas. No obstante, la iniciativa había recibido críticas por considerarse insuficiente y no abordar problemas estructurales como la precariedad laboral y el acceso dificultoso a la vivienda, desafíos que enfrentan muchos jóvenes.</p>
-    <p>La medida ha generado reacciones mixtas dentro de la sociedad y grupos juveniles. Mientras algunos sectores aplauden la nueva orientación presupuestaria, otros lamentan la pérdida de un apoyo simbólico que ayudaba a mitigar parte de los elevados gastos asociados a las bodas. Las redes sociales reflejan un debate intenso bajo el hashtag #AdiósAyudaBoda.</p>
-    <p>El gobierno ha aclarado que las solicitudes de ayuda presentadas antes del 31 de octubre se tramitarán y abonarán conforme a las condiciones actuales, pero no se aceptarán nuevas solicitudes a partir de noviembre.</p>
-    <p>Así, el Ejecutivo busca enfocar sus esfuerzos y recursos en políticas con un impacto estructural más significativo, en un contexto de prudencia fiscal y reorganización de prioridades sociales.</p>
-  </article>
+    <div class="fecha">Redacción | 24 de octubre de 2025</div>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=900&q=80" alt="Pareja de recién casados saliendo de la iglesia con confeti y familiares aplaudiendo">
+      <figcaption>Pareja de recién casados celebrando su boda en Madrid, foto de archivo.</figcaption>
+    </figure>
+    <p>El Ministerio de Juventud y Asuntos Sociales anunció este viernes la suspensión definitiva del programa de ayudas para cubrir parte de los gastos de boda para jóvenes menores de 35 años. La iniciativa, creada en 2022 para favorecer la estabilidad familiar y reducir los costes asociados a las celebraciones, dejará de estar vigente a partir del 1 de diciembre.</p>
+    <p>Fuentes oficiales explican que la decisión responde a un reajuste presupuestario. Los fondos asignados serán derivados a planes de vivienda juvenil y programas de empleo. “Queremos destinar los recursos públicos a medidas de mayor alcance para la juventud”, dijo la ministra en rueda de prensa.</p>
+    <p>Desde su implantación, la ayuda permitió a unas 12.800 parejas acceder a subvenciones para sus bodas, pero enfrentó críticas por no solucionar los problemas más graves de los jóvenes, como el acceso a la vivienda. La noticia ha causado debate en redes bajo el hashtag <strong>#AdiósAyudaBoda</strong>.</p>
+    <p>El Gobierno asegura que quienes hayan solicitado la subvención antes del 31 de octubre la recibirán, pero a partir de esa fecha no se aceptarán nuevas solicitudes. El portal oficial cerrará nuevas peticiones el próximo mes.</p>
+    <span class="firma">Por Laura Ramírez, Sección Sociedad</span>
+  </main>
   <footer>
-    &copy; 2025 El Diario Actual - Todos los derechos reservados
+    &copy; 2025 El Diario Actual – Todos los derechos reservados
   </footer>
 </body>
 </html>
